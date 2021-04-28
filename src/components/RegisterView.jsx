@@ -17,12 +17,15 @@ const RegisterView = ({dataLoaded, getDogData, nextScreen}) => {
             
                 return (
                     <div  onClick={() => { selectedDog(data) }} key={key}>
-
-                    <img src={data.img} alt="" />
                     
+                    <img src = {(data.present) ? (data.img) : (null) } />
+                    
+
+                    {data.present ? (<h3 >{data.name}</h3>) : null}
+
+                    {data.present ? (<h3 >{data.sex}</h3>) : null}
                   
-                  <h3 >{data.name}</h3>
-                  <h3 >{data.sex}</h3>
+                  
                   
                 
 
