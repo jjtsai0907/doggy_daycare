@@ -1,8 +1,12 @@
-const RegisterView = ({dataLoaded, getDogData, nextScreen}) => {
+const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
 
-    function selectedDog(data) {
+    function selectDog(data) {
         
-        console.log("clicked");
+        console.log("selceted dog:");
+        console.log(data);
+        setSelectedDog(data);
+        console.log("2: ");
+        
     }
     console.log({getDogData});
     console.log({dataLoaded});  
@@ -10,25 +14,26 @@ const RegisterView = ({dataLoaded, getDogData, nextScreen}) => {
 
     return (
         <div>
+
+            <button onClick={ nextScreen }> Go to info</button>
+
             {dataLoaded && getDogData ? (
           
             getDogData.map((data, key) => {
 
             
                 return (
-                    <div  onClick={() => { selectedDog(data) }} key={key}>
+                    <div onClick={() => {selectDog(data)}, nextScreen} key={key}>
                     
-                    <img src = {(data.present) ? (data.img) : (null) } />
+                    <img src = {(data.present) ? (data.img) : (data.img) } onClick={() => {selectDog(data)} } />
+                    
                     
 
-                    {data.present ? (<h3 >{data.name}</h3>) : null}
+                    {data.present ? (<h3 >{data.name}</h3>) : ("not present!")}
 
                     {data.present ? (<h3 >{data.sex}</h3>) : null}
                   
-                  
-                  
-                
-
+                   
             </div>
           )
         })

@@ -14,6 +14,7 @@ function App() {
   const apiUrl = 'https://api.jsonbin.io/b/607ef0d824143e5df08a0676';
   const [loaded, setLoaded] = useState(false);
   const [getDogData, setGetDogData] = useState(null);
+  const [selectedDog, setSelectedDog] = useState(null);
 
   useEffect(() => {
     DogApi(apiUrl, () => setLoaded(true), setGetDogData);
@@ -32,18 +33,30 @@ function App() {
       content = <RegisterView 
         dataLoaded = {loaded}
         getDogData = {getDogData}
-        //answeredCorrectly={() => setScore(score + 1)}
-        nextScreen={() => setCurrentScreen(INFO)}
+        nextScreen = {() => setCurrentScreen(INFO)}
+        setSelectedDog = {setSelectedDog}
       />
       break;
+      case INFO:
+        content = <InfoView 
+        dataLoaded = {loaded}
+        getDogData = {getDogData}
+        selectedDog = {selectedDog}
+        />;
+      break;
+
+
     default:
-      content = <InfoView />;
+      content = <WelcomeView
+      nextScreen={() => setCurrentScreen(REGISTER)} 
+      />
   }
 
 
 
   
   console.log({loaded});
+  console.log({selectedDog}); 
 
   return (
     <div className="App">
