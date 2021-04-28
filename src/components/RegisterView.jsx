@@ -1,3 +1,8 @@
+import './registerView.css';
+
+
+
+
 const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
 
     function selectDog(data) {
@@ -25,7 +30,7 @@ const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
                 return (
                     <div onClick={() => {selectDog(data)}, nextScreen} key={key}>
                     
-                    <img src = {(data.present) ? (data.img) : (data.img) } onClick={() => {selectDog(data)} } />
+                    <img className= "dogIamge" src = {(data.present) ? (data.img) : (data.img) } onClick={() => {selectDog(data)} } />
                     
                     
 

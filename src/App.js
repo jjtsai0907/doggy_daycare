@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './doggylogo.png';
 import './App.css';
 import WelcomeView from './components/WelcomeView';
 import RegisterView from './components/RegisterView';
@@ -45,11 +45,6 @@ function App() {
         />;
       break;
 
-
-    default:
-      content = <WelcomeView
-      nextScreen={() => setCurrentScreen(REGISTER)} 
-      />
   }
 
 
@@ -67,6 +62,8 @@ function App() {
         </p>
         
       </header>
+      
+       
 
       <main>
       {content}
