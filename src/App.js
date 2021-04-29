@@ -1,3 +1,4 @@
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import logo from './doggylogo.png';
 import './App.css';
 import WelcomeView from './components/WelcomeView';
@@ -21,7 +22,7 @@ function App() {
     console.log("getting data");
     
   }, []);
-
+/*
   let content = null;
   switch(currentScreen) {
     case WELCOME:
@@ -49,11 +50,12 @@ function App() {
 
 
 
-  
+  */
   console.log({loaded});
   console.log({selectedDog}); 
 
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -64,12 +66,27 @@ function App() {
       </header>
       
        
-
-      <main>
-      {content}
-      </main>
-
+      <Switch>
+        <Route exact path="/">
+          <WelcomeView />
+        </Route>
+        <Route path="/register">
+          <RegisterView 
+            dataLoaded = {loaded}
+            getDogData = {getDogData}
+            setSelectedDog = {setSelectedDog}
+          />
+        </Route>
+        <Route path="/info">
+          <InfoView 
+            dataLoaded = {loaded}
+            getDogData = {getDogData}
+            selectedDog = {selectedDog}
+          />
+        </Route>
+      </Switch>
     </div>
+    </Router>
   );
 }
 

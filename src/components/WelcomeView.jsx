@@ -1,11 +1,29 @@
+import { useHistory } from "react-router-dom";
 import './welcomeView.css';
 
-const WelcomeView = ({ nextScreen}) => {
+
+
+
+const WelcomeView = () => {
+
+
+    const history = useHistory();
+  
+    function handleClick() {
+
+      history.push("/register");
+    }
+ 
+
+
+
+
+
     return (
         <div>
             <h1>Welcome to Doggy Daycare</h1>
 
-            <button onClick={ nextScreen}> Go to register</button>
+            <button onClick={handleClick}> Go to register</button>
         </div>
     ) 
 }

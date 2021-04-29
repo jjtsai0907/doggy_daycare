@@ -1,26 +1,34 @@
+import { useHistory } from "react-router-dom";
 import './registerView.css';
 
 
+const RegisterView = ({dataLoaded, getDogData, setSelectedDog}) => {
 
+  const history = useHistory();
+  
+  function handleClick() {
 
-const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
+    history.push("/info");
+  }
+ 
 
-    function selectDog(data) {
+  function selectDog(data) {
         
-        console.log("selceted dog:");
-        console.log(data);
-        setSelectedDog(data);
-        console.log("2: ");
-        
-    }
-    console.log({getDogData});
-    console.log({dataLoaded});  
+      console.log("selceted dog:");
+      console.log(data);
+      setSelectedDog(data);
+      console.log("2: ");
+      
+  }
+
+  console.log({getDogData});
+  console.log({dataLoaded});  
 
 
-    return (
-        <div>
+return (
+  <div>
 
-            <button onClick={ nextScreen }> Go to info</button>
+            <button onClick={ handleClick }> Go to info</button>
 
             {dataLoaded && getDogData ? (
           
@@ -28,7 +36,7 @@ const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
 
             
                 return (
-                    <div onClick={() => {selectDog(data)}, nextScreen} key={key}>
+                    <div onClick={() => {selectDog(data)}, handleClick} key={key}>
                     
                     <img className= "dogIamge" src = {(data.present) ? (data.img) : (data.img) } onClick={() => {selectDog(data)} } />
                     
@@ -48,15 +56,9 @@ const RegisterView = ({dataLoaded, getDogData, nextScreen, setSelectedDog}) => {
         </div>
       )}
     </div>
+  
+);
 
-
-
-        /*<div>
-            This is Register View! {getDogData}
-            <button onClick={ nextScreen }> Go to info</button>
-            <p> {getDogData} </p>
-        </div>*/
-    ) 
 }
 
 export default RegisterView;
