@@ -1,7 +1,39 @@
-.dogIamge {
-    
+.registerV.dogIamge {
+    padding: 8em;
     width:300px;
     height:300px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.registerV.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 1.5rem 0 ;
+    margin: 0.3rem;
+    border: 1px solid #efefef;
+    border-radius: 0.2rem;
+    min-width: 160px;
+    text-align: left;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
+  }
+
+
+.registerV.dogIamge.notPresent {
+    opacity: 0.5;
+    width:300px;
+    height:300px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 8em;
+}
+
+.registerV.h2 {
+    color: #4b778d;
+}
+
+.notHome.h1 {
+    color: #8fd9a8;
 }

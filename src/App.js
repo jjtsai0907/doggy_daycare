@@ -22,35 +22,7 @@ function App() {
     console.log("getting data");
     
   }, []);
-/*
-  let content = null;
-  switch(currentScreen) {
-    case WELCOME:
-      content = <WelcomeView
-      nextScreen={() => setCurrentScreen(REGISTER)} 
-      />
-      break;
-    case REGISTER: 
-      content = <RegisterView 
-        dataLoaded = {loaded}
-        getDogData = {getDogData}
-        nextScreen = {() => setCurrentScreen(INFO)}
-        setSelectedDog = {setSelectedDog}
-      />
-      break;
-      case INFO:
-        content = <InfoView 
-        dataLoaded = {loaded}
-        getDogData = {getDogData}
-        selectedDog = {selectedDog}
-        />;
-      break;
 
-  }
-
-
-
-  */
   console.log({loaded});
   console.log({selectedDog}); 
 
