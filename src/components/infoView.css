@@ -1,0 +1,30 @@
+/*.infoV > :first-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 0.05em;
+}
+
+*/
+/*
+.infoV.grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+*/
+
+.infoV.grid{
+    
+    display: grid;
+    grid-gap: 0em;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background-color: #d2e69c;
+    text-align: left;
+    padding: 2em;
+    color: #4b778d;
+}
+
+.infoV.h1 {
+    color: white;
+}
