@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import logo from './doggylogo.png';
 import './App.css';
 import WelcomeView from './components/WelcomeView';
