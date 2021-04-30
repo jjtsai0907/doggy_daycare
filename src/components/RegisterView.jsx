@@ -30,7 +30,7 @@ const RegisterView = ({ dataLoaded, getDogData, setSelectedDog }) => {
 
   return (
     <div >
-
+      <h1 className="registerV white h1"> Who is at home right now? </h1>
       
       <div >
         {dataLoaded && getDogData ? (
@@ -38,7 +38,7 @@ const RegisterView = ({ dataLoaded, getDogData, setSelectedDog }) => {
           getDogData.map((data, key) => {
 
 
-            let dogImageClass = "registerV dogIamge";
+            let dogImageClass = "registerV dogImage";
             if (!data.present) {
               dogImageClass += " notPresent";
             }
@@ -52,18 +52,19 @@ const RegisterView = ({ dataLoaded, getDogData, setSelectedDog }) => {
 
             
             return (
+              
 
               <div className="registerV card-container" onClick={() => { selectDog(data)}, handleClick} key={key}>
+                <div className="registerV card-image">
+                  <img className={dogImageClass} src={(data.img)} onClick={() => { selectDog(data) }} />
 
-                <img className={dogImageClass} src={(data.img)} onClick={() => { selectDog(data) }} />
-
-
-                <div>
+                </div>
+                <div className="registerV greeting">
 
                   {data.present ? (<h1 onClick={() => { selectDog(data) }}>Woof-woof! {data.name} is right here :D</h1>) :  (<h1 onClick={() => { selectDog(data) }} className="notHome h1"> Our {data.name} is currently not at home!</h1>)}
                   
 
-                  <h2 onClick={() => { selectDog(data) }} className="registerV h2"> One click away to know more about {dogSex}...</h2>
+                  <h2 onClick={() => { selectDog(data) }} className="registerV h2"> Hit the photo to know more about {dogSex}...!</h2>
 
                 </div>
 

@@ -3,3 +3,16 @@
     background-color: #6820c0;
     height: 100%;
   }
+
+
+.welcomeV.h1 {
+  color: #ffffff;
+  font-weight: bold;
+  
+  border: 1px solid #d2e69c;
+  border-radius: 1.2rem;
+  padding: 0.8em;
+  text-shadow: rgb(2, 10, 10);
+  background-color: #4b778d;
+  box-shadow: 5 10px 15px rgba(0, 0, 0, 0.089);
+}  

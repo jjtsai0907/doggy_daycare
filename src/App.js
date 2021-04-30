@@ -7,6 +7,7 @@ import React, {useState, useEffect} from 'react';
 import InfoView from './components/InfoView';
 import DogApi from './DogApi';
 
+
 function App() {
 
   const WELCOME = 'welcome', REGISTER = 'register', INFO = 'info';
@@ -31,9 +32,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          
-        </p>
+        <h1>
+          Central Stockhom 24/7 Love & Care  
+        </h1>
         
       </header>
       

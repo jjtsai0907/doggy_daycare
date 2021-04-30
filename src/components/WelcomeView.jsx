@@ -21,9 +21,9 @@ const WelcomeView = () => {
 
     return (
         <div>
-            <h1>Welcome to Doggy Daycare</h1>
+            <h1 className="welcomeV h1" onClick={handleClick}>Click to check out our residents!</h1>
 
-            <button onClick={handleClick}> Go to register</button>
+            
         </div>
     ) 
 }

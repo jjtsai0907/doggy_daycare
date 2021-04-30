@@ -1,39 +1,78 @@
-.registerV.dogIamge {
-    padding: 8em;
-    width:300px;
-    height:300px;
+
+.registerV.dogImage {
     object-fit: cover;
     border-radius: 50%;
+    
+    width: 300px;;
+    height: 300px;;
+    padding: 8em;
+    display: flex;
 }
+/*
+.regiderV.greeting {
+    padding-right: 15em;
+}*/
 
 .registerV.card-container {
-    display: flex;
+    /*padding: 3em;*/
+    
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-    padding: 1.5rem 0 ;
-    margin: 0.3rem;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #efefef;
     border-radius: 0.2rem;
-    min-width: 160px;
     text-align: left;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
-  }
+    display: flex;
+}
 
 
-.registerV.dogIamge.notPresent {
-    opacity: 0.5;
+.registerV.dogImage.notPresent {
+    opacity: 0.3;
     width:300px;
     height:300px;
     object-fit: cover;
     border-radius: 50%;
     padding: 8em;
+    display: flex;
 }
 
 .registerV.h2 {
     color: #4b778d;
+    
 }
+
 
 .notHome.h1 {
     color: #8fd9a8;
+    
+}
+
+.registerV.white.h1 {
+    color: #ffffff;
+    font-style: oblique;
+}
+
+
+@media screen and (max-width: 1068px) {
+    .registerV.card-container{
+        min-width: 100%;
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width: 868px) {
+    .registerV.card-container{
+        min-width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registerV.card-container{
+        min-width: 100%;
+        flex-direction: column;
+    }
 }
